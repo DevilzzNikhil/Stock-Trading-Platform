@@ -1,0 +1,406 @@
+[
+    {
+        "name": "HAVELLSEQN",
+        "symbol": "HAVELLS"
+    },
+    {
+        "name": "HALEQN",
+        "symbol": "HAL"
+    },
+    {
+        "name": "BAJFINANCEEQN",
+        "symbol": "BAJFINANCE"
+    },
+    {
+        "name": "SBINEQN",
+        "symbol": "SBIN"
+    },
+    {
+        "name": "GRASIMEQN",
+        "symbol": "GRASIM"
+    },
+    {
+        "name": "HDFCBANKEQN",
+        "symbol": "HDFCBANK"
+    },
+    {
+        "name": "DMARTEQN",
+        "symbol": "DMART"
+    },
+    {
+        "name": "COLPALEQN",
+        "symbol": "COLPAL"
+    },
+    {
+        "name": "NYKAAEQN",
+        "symbol": "NYKAA"
+    },
+    {
+        "name": "PIDILITINDEQN",
+        "symbol": "PIDILITIND"
+    },
+    {
+        "name": "INDUSTOWEREQN",
+        "symbol": "INDUSTOWER"
+    },
+    {
+        "name": "HEROMOTOCOEQN",
+        "symbol": "HEROMOTOCO"
+    },
+    {
+        "name": "ONGCEQN",
+        "symbol": "ONGC"
+    },
+    {
+        "name": "AXISBANKEQN",
+        "symbol": "AXISBANK"
+    },
+    {
+        "name": "PIINDEQN",
+        "symbol": "PIIND"
+    },
+    {
+        "name": "IRCTCEQN",
+        "symbol": "IRCTC"
+    },
+    {
+        "name": "DIVISLABEQN",
+        "symbol": "DIVISLAB"
+    },
+    {
+        "name": "NAUKRIEQN",
+        "symbol": "NAUKRI"
+    },
+    {
+        "name": "SRFEQN",
+        "symbol": "SRF"
+    },
+    {
+        "name": "SUNPHARMAEQN",
+        "symbol": "SUNPHARMA"
+    },
+    {
+        "name": "MUTHOOTFINEQN",
+        "symbol": "MUTHOOTFIN"
+    },
+    {
+        "name": "BPCLEQN",
+        "symbol": "BPCL"
+    },
+    {
+        "name": "HDFCAMCEQN",
+        "symbol": "HDFCAMC"
+    },
+    {
+        "name": "VEDLEQN",
+        "symbol": "VEDL"
+    },
+    {
+        "name": "SHREECEMEQN",
+        "symbol": "SHREECEM"
+    },
+    {
+        "name": "HCLTECHEQN",
+        "symbol": "HCLTECH"
+    },
+    {
+        "name": "INDUSINDBKEQN",
+        "symbol": "INDUSINDBK"
+    },
+    {
+        "name": "PAYTMEQN",
+        "symbol": "PAYTM"
+    },
+    {
+        "name": "SIEMENSEQN",
+        "symbol": "SIEMENS"
+    },
+    {
+        "name": "ICICIPRULIEQN",
+        "symbol": "ICICIPRULI"
+    },
+    {
+        "name": "TECHMEQN",
+        "symbol": "TECHM"
+    },
+    {
+        "name": "TCSEQN",
+        "symbol": "TCS"
+    },
+    {
+        "name": "SBILIFEEQN",
+        "symbol": "SBILIFE"
+    },
+    {
+        "name": "ACCEQN",
+        "symbol": "ACC"
+    },
+    {
+        "name": "TORNTPHARMEQN",
+        "symbol": "TORNTPHARM"
+    },
+    {
+        "name": "ICICIGIEQN",
+        "symbol": "ICICIGI"
+    },
+    {
+        "name": "DABUREQN",
+        "symbol": "DABUR"
+    },
+    {
+        "name": "UPLEQN",
+        "symbol": "UPL"
+    },
+    {
+        "name": "ADANIGREENEQN",
+        "symbol": "ADANIGREEN"
+    },
+    {
+        "name": "SBICARDEQN",
+        "symbol": "SBICARD"
+    },
+    {
+        "name": "HINDALCOEQN",
+        "symbol": "HINDALCO"
+    },
+    {
+        "name": "COALINDIAEQN",
+        "symbol": "COALINDIA"
+    },
+    {
+        "name": "ITCEQN",
+        "symbol": "ITC"
+    },
+    {
+        "name": "GODREJCPEQN",
+        "symbol": "GODREJCP"
+    },
+    {
+        "name": "BIOCONEQN",
+        "symbol": "BIOCON"
+    },
+    {
+        "name": "BERGEPAINTEQN",
+        "symbol": "BERGEPAINT"
+    },
+    {
+        "name": "RELIANCEEQN",
+        "symbol": "RELIANCE"
+    },
+    {
+        "name": "NIFTY 100",
+        "symbol": "NIFTY 100"
+    },
+    {
+        "name": "ADANIPORTSEQN",
+        "symbol": "ADANIPORTS"
+    },
+    {
+        "name": "EICHERMOTEQN",
+        "symbol": "EICHERMOT"
+    },
+    {
+        "name": "BANKBARODAEQN",
+        "symbol": "BANKBARODA"
+    },
+    {
+        "name": "CHOLAFINEQN",
+        "symbol": "CHOLAFIN"
+    },
+    {
+        "name": "BAJAJ-AUTOEQN",
+        "symbol": "BAJAJ-AUTO"
+    },
+    {
+        "name": "GAILEQN",
+        "symbol": "GAIL"
+    },
+    {
+        "name": "LTIMEQN",
+        "symbol": "LTIM"
+    },
+    {
+        "name": "M&MEQN",
+        "symbol": "M&M"
+    },
+    {
+        "name": "GLANDEQN",
+        "symbol": "GLAND"
+    },
+    {
+        "name": "TATASTEELEQN",
+        "symbol": "TATASTEEL"
+    },
+    {
+        "name": "APOLLOHOSPEQN",
+        "symbol": "APOLLOHOSP"
+    },
+    {
+        "name": "NESTLEINDEQN",
+        "symbol": "NESTLEIND"
+    },
+    {
+        "name": "POWERGRIDEQN",
+        "symbol": "POWERGRID"
+    },
+    {
+        "name": "MARICOEQN",
+        "symbol": "MARICO"
+    },
+    {
+        "name": "BAJAJHLDNGEQN",
+        "symbol": "BAJAJHLDNG"
+    },
+    {
+        "name": "TATAMOTORSEQN",
+        "symbol": "TATAMOTORS"
+    },
+    {
+        "name": "ADANIENTEQN",
+        "symbol": "ADANIENT"
+    },
+    {
+        "name": "HINDUNILVREQN",
+        "symbol": "HINDUNILVR"
+    },
+    {
+        "name": "BRITANNIAEQN",
+        "symbol": "BRITANNIA"
+    },
+    {
+        "name": "BOSCHLTDEQN",
+        "symbol": "BOSCHLTD"
+    },
+    {
+        "name": "HDFCLIFEEQN",
+        "symbol": "HDFCLIFE"
+    },
+    {
+        "name": "AMBUJACEMEQN",
+        "symbol": "AMBUJACEM"
+    },
+    {
+        "name": "WIPROEQN",
+        "symbol": "WIPRO"
+    },
+    {
+        "name": "MCDOWELL-NEQN",
+        "symbol": "MCDOWELL-N"
+    },
+    {
+        "name": "TATACONSUMEQN",
+        "symbol": "TATACONSUM"
+    },
+    {
+        "name": "ADANITRANSEQN",
+        "symbol": "ADANITRANS"
+    },
+    {
+        "name": "ASIANPAINTEQN",
+        "symbol": "ASIANPAINT"
+    },
+    {
+        "name": "MPHASISEQN",
+        "symbol": "MPHASIS"
+    },
+    {
+        "name": "JSWSTEELEQN",
+        "symbol": "JSWSTEEL"
+    },
+    {
+        "name": "BAJAJFINSVEQN",
+        "symbol": "BAJAJFINSV"
+    },
+    {
+        "name": "ULTRACEMCOEQN",
+        "symbol": "ULTRACEMCO"
+    },
+    {
+        "name": "NTPCEQN",
+        "symbol": "NTPC"
+    },
+    {
+        "name": "ZOMATOEQN",
+        "symbol": "ZOMATO"
+    },
+    {
+        "name": "BELEQN",
+        "symbol": "BEL"
+    },
+    {
+        "name": "TITANEQN",
+        "symbol": "TITAN"
+    },
+    {
+        "name": "DRREDDYEQN",
+        "symbol": "DRREDDY"
+    },
+    {
+        "name": "INFYEQN",
+        "symbol": "INFY"
+    },
+    {
+        "name": "HDFCEQN",
+        "symbol": "HDFC"
+    },
+    {
+        "name": "IOCEQN",
+        "symbol": "IOC"
+    },
+    {
+        "name": "BHARTIARTLEQN",
+        "symbol": "BHARTIARTL"
+    },
+    {
+        "name": "LICIEQN",
+        "symbol": "LICI"
+    },
+    {
+        "name": "ATGLEQN",
+        "symbol": "ATGL"
+    },
+    {
+        "name": "MOTHERSONEQN",
+        "symbol": "MOTHERSON"
+    },
+    {
+        "name": "BANDHANBNKEQN",
+        "symbol": "BANDHANBNK"
+    },
+    {
+        "name": "TATAPOWEREQN",
+        "symbol": "TATAPOWER"
+    },
+    {
+        "name": "KOTAKBANKEQN",
+        "symbol": "KOTAKBANK"
+    },
+    {
+        "name": "DLFEQN",
+        "symbol": "DLF"
+    },
+    {
+        "name": "MARUTIEQN",
+        "symbol": "MARUTI"
+    },
+    {
+        "name": "LTEQN",
+        "symbol": "LT"
+    },
+    {
+        "name": "INDIGOEQN",
+        "symbol": "INDIGO"
+    },
+    {
+        "name": "ICICIBANKEQN",
+        "symbol": "ICICIBANK"
+    },
+    {
+        "name": "CIPLAEQN",
+        "symbol": "CIPLA"
+    },
+    {
+        "name": "PGHHEQN",
+        "symbol": "PGHH"
+    }
+]
