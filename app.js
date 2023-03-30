@@ -10,7 +10,7 @@ const authRouter = require('./routes/authRoutes')
 const stockRouter = require("./routes/stockRoutes") ;
 const tradeRouter = require("./routes/tradeRoutes") ;
 
-const DB = `mongodb+srv://${[process.env.Username]}:${process.env.Pass}@cluster0.iazteqn.mongodb.net`
+const DB = process.env.MONGO_URI
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }))
