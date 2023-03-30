@@ -28,9 +28,14 @@ const userSchema = new Schema(
             default: 1000000,
         },
         tokens: [],
+        stocks: [{
+            type: Schema.Types.ObjectId,
+            ref: "Stock"
+        }],
     },
     {
         timestamps: true,
+        toJSON: {virtuals:true}
     }
 );
 
@@ -49,6 +54,7 @@ userSchema.pre('save', function (next) {
         })
     })
 })
+
 
 
 userSchema.methods.toJSON = function(){

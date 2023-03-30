@@ -31,6 +31,8 @@ exports.purchaseStock = async (req, res) => {
         }
         else {
             const purchase = new Stock({ ticker: ticker, quantity: quantity, price: price * quantity, user: user._id })
+            req.user.stocks.push(purchase._id) ;
+            await req.user.save() ;
             await purchase.save()
         }
 
