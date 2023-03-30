@@ -10,8 +10,7 @@ const authRouter = require('./routes/authRoutes')
 const stockRouter = require("./routes/stockRoutes") ;
 const tradeRouter = require("./routes/tradeRoutes") ;
 
-
-const DB = process.env.DB
+const DB = `mongodb+srv://${[process.env.Username]}:${process.env.Pass}@cluster0.iazteqn.mongodb.net`
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -30,7 +29,7 @@ app.use('/trade', tradeRouter) ;
 
 
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 6000
 
 mongoose
     .connect(DB, { useNewUrlParser: true, useUnifiedTopology: true })
