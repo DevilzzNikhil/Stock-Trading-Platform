@@ -1,8 +1,8 @@
 const User = require("../models/userModel")
-const stockNames = require("../assets/Names.json")
+const stockNames = require("../Sheet1.json")
 const Stock = require("../models/stocksModel")
 
-const {getStockInformation, getTimedVariedData} = require("../utility/stocksInfo")
+const {getStockInformation, getTimedVariedData, getInfoOfOneStock } = require("../utility/stocksInfo")
 const ObjectId = require("mongoose").Types.ObjectId ;
 
 exports.stockData = async (req,res) => {
@@ -10,9 +10,10 @@ exports.stockData = async (req,res) => {
     return res.status(200).json({data});
 }
 
-exports.stockNames = async(req,res) => {
-    const data = stockNames ;
-    return res.status(200).json({data})
+exports.stockInfo = async(req,res) => {
+    const symbol = req.query.symbol ; 
+    const res_data = await getInfoOfOneStock(symbol) ;
+    res.status(200).json({res_data}) ;
 }
 
 exports.stockTimedData = async(req,res) => {
@@ -23,6 +24,8 @@ exports.stockTimedData = async(req,res) => {
     if(req.query.symbol) symbol = req.query.symbol
     if( req.query.timeDuration) timeDuration = req.query.timeDuration
     if( req.query.interval) interval = req.query.interval
+
+    console.log(symbol, timeDuration)
 
     data = await getTimedVariedData(timeDuration, symbol, interval) ;
     

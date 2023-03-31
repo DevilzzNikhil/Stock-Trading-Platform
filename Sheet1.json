@@ -1,0 +1,310 @@
+[
+ {
+   "Symbol": "ABNB",
+   "Name": "Airbnb, Inc. Class A Common Stock"
+ },
+ {
+   "Symbol": "ADBE",
+   "Name": "Adobe Inc. Common Stock"
+ },
+ {
+   "Symbol": "ADP",
+   "Name": "Automatic Data Processing, Inc. Common Stock"
+ },
+ {
+   "Symbol": "AEP",
+   "Name": "American Electric Power Company, Inc. Common Stock"
+ },
+ {
+   "Symbol": "ALGN",
+   "Name": "Align Technology, Inc. Common Stock"
+ },
+ {
+   "Symbol": "AMAT",
+   "Name": "Applied Materials, Inc. Common Stock"
+ },
+ {
+   "Symbol": "AMGN",
+   "Name": "Amgen Inc. Common Stock"
+ },
+ {
+   "Symbol": "AMZN",
+   "Name": "Amazon.com, Inc. Common Stock"
+ },
+ {
+   "Symbol": "ASML",
+   "Name": "ASML Holding N.V. New York Registry Shares"
+ },
+ {
+   "Symbol": "ATVI",
+   "Name": "Activision Blizzard, Inc. Common Stock"
+ },
+ {
+   "Symbol": "AVGO",
+   "Name": "Broadcom Inc. Common Stock"
+ },
+ {
+   "Symbol": "AZN",
+   "Name": "AstraZeneca PLC American Depositary Shares"
+ },
+ {
+   "Symbol": "BIIB",
+   "Name": "Biogen Inc. Common Stock"
+ },
+ {
+   "Symbol": "BKR",
+   "Name": "Baker Hughes Company Class A Common Stock"
+ },
+ {
+   "Symbol": "CDNS",
+   "Name": "Cadence Design Systems, Inc. Common Stock"
+ },
+ {
+   "Symbol": "CEG",
+   "Name": "Constellation Energy Corporation Common Stock"
+ },
+ {
+   "Symbol": "CHTR",
+   "Name": "Charter Communications, Inc. Class A Common Stock New"
+ },
+ {
+   "Symbol": "CMCSA",
+   "Name": "Comcast Corporation Class A Common Stock"
+ },
+ {
+   "Symbol": "COST",
+   "Name": "Costco Wholesale Corporation Common Stock"
+ },
+ {
+   "Symbol": "CPRT",
+   "Name": "Copart, Inc. (DE) Common Stock"
+ },
+ {
+   "Symbol": "CRWD",
+   "Name": "CrowdStrike Holdings, Inc. Class A Common Stock"
+ },
+ {
+   "Symbol": "CSGP",
+   "Name": "CoStar Group, Inc. Common Stock"
+ },
+ {
+   "Symbol": "CSX",
+   "Name": "CSX Corporation Common Stock"
+ },
+ {
+   "Symbol": "CTAS",
+   "Name": "Cintas Corporation Common Stock"
+ },
+ {
+   "Symbol": "CTSH",
+   "Name": "Cognizant Technology Solutions Corporation Class A Common Stock"
+ },
+ {
+   "Symbol": "DDOG",
+   "Name": "Datadog, Inc. Class A Common Stock"
+ },
+ {
+   "Symbol": "DLTR",
+   "Name": "Dollar Tree Inc. Common Stock"
+ },
+ {
+   "Symbol": "DXCM",
+   "Name": "DexCom, Inc. Common Stock"
+ },
+ {
+   "Symbol": "EA",
+   "Name": "Electronic Arts Inc. Common Stock"
+ },
+ {
+   "Symbol": "EBAY",
+   "Name": "eBay Inc. Common Stock"
+ },
+ {
+   "Symbol": "EXC",
+   "Name": "Exelon Corporation Common Stock"
+ },
+ {
+   "Symbol": "FANG",
+   "Name": "Diamondback Energy, Inc. Common Stock"
+ },
+ {
+   "Symbol": "FAST",
+   "Name": "Fastenal Company Common Stock"
+ },
+ {
+   "Symbol": "FISV",
+   "Name": "Fiserv, Inc. Common Stock"
+ },
+ {
+   "Symbol": "FTNT",
+   "Name": "Fortinet, Inc. Common Stock"
+ },
+ {
+   "Symbol": "GFS",
+   "Name": "GlobalFoundries Inc. Ordinary Shares"
+ },
+ {
+   "Symbol": "GOOGL",
+   "Name": "Alphabet Inc. Class A Common Stock"
+ },
+ {
+   "Symbol": "HON",
+   "Name": "Honeywell International Inc. Common Stock"
+ },
+ {
+   "Symbol": "IDXX",
+   "Name": "IDEXX Laboratories, Inc. Common Stock"
+ },
+ {
+   "Symbol": "ILMN",
+   "Name": "Illumina, Inc. Common Stock"
+ },
+ {
+   "Symbol": "INTC",
+   "Name": "Intel Corporation Common Stock"
+ },
+ {
+   "Symbol": "INTU",
+   "Name": "Intuit Inc. Common Stock"
+ },
+ {
+   "Symbol": "ISRG",
+   "Name": "Intuitive Surgical, Inc. Common Stock"
+ },
+ {
+   "Symbol": "JD",
+   "Name": "JD.com, Inc. American Depositary Shares"
+ },
+ {
+   "Symbol": "KDP",
+   "Name": "Keurig Dr Pepper Inc. Common Stock"
+ },
+ {
+   "Symbol": "KHC",
+   "Name": "The Kraft Heinz Company Common Stock"
+ },
+ {
+   "Symbol": "KLAC",
+   "Name": "KLA Corporation Common Stock"
+ },
+ {
+   "Symbol": "LCID",
+   "Name": "Lucid Group, Inc. Common Stock"
+ },
+ {
+   "Symbol": "MAR",
+   "Name": "Marriott International Class A Common Stock"
+ },
+ {
+   "Symbol": "MCHP",
+   "Name": "Microchip Technology Incorporated Common Stock"
+ },
+ {
+   "Symbol": "MDLZ",
+   "Name": "Mondelez International, Inc. Class A Common Stock"
+ },
+ {
+   "Symbol": "MELI",
+   "Name": "MercadoLibre, Inc. Common Stock"
+ },
+ {
+   "Symbol": "MNST",
+   "Name": "Monster Beverage Corporation"
+ },
+ {
+   "Symbol": "MRVL",
+   "Name": "Marvell Technology, Inc. Common Stock"
+ },
+ {
+   "Symbol": "ODFL",
+   "Name": "Old Dominion Freight Line, Inc. Common Stock"
+ },
+ {
+   "Symbol": "ORLY",
+   "Name": "O'Reilly Automotive, Inc. Common Stock"
+ },
+ {
+   "Symbol": "PAYX",
+   "Name": "Paychex, Inc. Common Stock"
+ },
+ {
+   "Symbol": "PCAR",
+   "Name": "PACCAR Inc. Common Stock"
+ },
+ {
+   "Symbol": "PDD",
+   "Name": "PDD Holdings Inc. American Depositary Shares"
+ },
+ {
+   "Symbol": "QCOM",
+   "Name": "QUALCOMM Incorporated Common Stock"
+ },
+ {
+   "Symbol": "REGN",
+   "Name": "Regeneron Pharmaceuticals, Inc. Common Stock"
+ },
+ {
+   "Symbol": "RIVN",
+   "Name": "Rivian Automotive, Inc. Class A Common Stock"
+ },
+ {
+   "Symbol": "ROST",
+   "Name": "Ross Stores, Inc. Common Stock"
+ },
+ {
+   "Symbol": "SBUX",
+   "Name": "Starbucks Corporation Common Stock"
+ },
+ {
+   "Symbol": "SGEN",
+   "Name": "Seagen Inc. Common Stock"
+ },
+ {
+   "Symbol": "SIRI",
+   "Name": "Sirius XM Holdings Inc. Common Stock"
+ },
+ {
+   "Symbol": "SNPS",
+   "Name": "Synopsys, Inc. Common Stock"
+ },
+ {
+   "Symbol": "TMUS",
+   "Name": "T-Mobile US, Inc. Common Stock"
+ },
+ {
+   "Symbol": "TXN",
+   "Name": "Texas Instruments Incorporated Common Stock"
+ },
+ {
+   "Symbol": "VRSK",
+   "Name": "Verisk Analytics, Inc. Common Stock"
+ },
+ {
+   "Symbol": "VRTX",
+   "Name": "Vertex Pharmaceuticals Incorporated Common Stock"
+ },
+ {
+   "Symbol": "WBA",
+   "Name": "Walgreens Boots Alliance, Inc. Common Stock"
+ },
+ {
+   "Symbol": "WBD",
+   "Name": "Warner Bros. Discovery, Inc. Series A Common Stock"
+ },
+ {
+   "Symbol": "WDAY",
+   "Name": "Workday, Inc. Class A Common Stock"
+ },
+ {
+   "Symbol": "XEL",
+   "Name": "Xcel Energy Inc. Common Stock"
+ },
+ {
+   "Symbol": "ZM",
+   "Name": "Zoom Video Communications, Inc. Class A Common Stock"
+ },
+ {
+   "Symbol": "ZS",
+   "Name": "Zscaler, Inc. Common Stock"
+ }
+]

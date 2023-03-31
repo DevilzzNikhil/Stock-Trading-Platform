@@ -1,34 +1,25 @@
 const axios = require("axios");
-const stockName = require("../assets/StocksData.json")
-const fs = require('fs');
-const { time } = require("console");
-require("dotenv").config() ;
-// const options = {
-//     url: "https://realstonks.p.rapidapi.com/AAPL",
-//     method: 'GET',
-//     headers: {
-//         'X-RapidAPI-Key': '2672419d46mshaba07eccc62d511p1a4ae8jsn56866a8d9340',
-//         'X-RapidAPI-Host': 'realstonks.p.rapidapi.com'
-//     }
-// };
+require("dotenv").config();
 
 
+async function getInfoOfOneStock(symbol) {
+    let url = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol}&apikey=${process.env.API_KEY}`
 
-// const url = "https://realstonks.p.rapidapi.com/";
-// async function getRealTimeStockData() {
-//     const data = []
-//     stockName.map(async (stock, key) => {
-//         let newUrl = url + stock.Symbol;
-//         // options.url = newUrl;
-//         await axios.request(options).then(function (response) {
-//             console.log(response.data);
-//         }).catch(function (error) {
-//             console.error(error);
-//         })
-//     })
-
-// }
-
+    let data ;
+    let option = {
+        method: "GET",
+        url: url,
+        headers: { 'User-Agent': 'request' },
+    }
+    await axios.request(option).then(function (response) {
+        data = response.data;
+    })
+    let new_data ; 
+    Object.keys(data).map((key)=> {
+        new_data = data[key]
+    })
+    return new_data 
+}
 
 async function getStockInformation() {
     let data = [];
@@ -75,36 +66,29 @@ async function getStockInformation() {
 
 
 
-async function getTimedVariedData(timeDuration, sybmol, interval)
-{
+async function getTimedVariedData(timeDuration, sybmol, interval) {
     let duration = "TIME_SERIES_WEEKLY"
-    if( timeDuration == "Monthly") duration = "TIME_SERIES_MONTHLY"
-    if( timeDuration == "Weekely") duration = "TIME_SERIES_WEEKLY"
-    if( timeDuration == "Daily") duration = "TIME_SERIES_DAILY_ADJUSTED"
- 
-    let url = `https://www.alphavantage.co/query?function=${duration}&symbol=${sybmol}&apikey=${process.env.API_KEY}`
-    let data = [] ;
+    if (timeDuration == "Monthly") duration = "TIME_SERIES_MONTHLY"
+    if (timeDuration == "Weekely") duration = "TIME_SERIES_WEEKLY"
+    if (timeDuration == "Daily") duration = "TIME_SERIES_DAILY_ADJUSTED"
 
-    if( timeDuration == "Hourly")
-    {
+    let url = `https://www.alphavantage.co/query?function=${duration}&symbol=${sybmol}&apikey=${process.env.API_KEY}`
+    let data = [];
+
+    if (timeDuration == "Hourly") {
         duration = "TIME_SERIES_INTRADAY"
         url = `https://www.alphavantage.co/query?function=${duration}&symbol=${sybmol}&interval=${interval}&apikey=${process.env.API_KEY}`
-    } 
+    }
+
+    console.log(url);
 
     let option = {
-        method : "GET" ,
-        url : url, 
-        headers: {'User-Agent': 'request'},
+        method: "GET",
+        url: url,
+        headers: { 'User-Agent': 'request' },
     }
-    await axios.request(option).then( function(response){
-        data = response.data ;
+    await axios.request(option).then(function (response) {
+        data = response.data;
     })
-
-    var stocks = JSON.stringify(data);
-    fs.writeFile("CustomData.json", stocks, function (err, result) {
-        if (err) console.log('error', err);
-    });
-
-    return data
 }
-module.exports = { getStockInformation, getTimedVariedData };
+module.exports = { getStockInformation, getTimedVariedData , getInfoOfOneStock};
