@@ -1,5 +1,6 @@
 const User = require("../models/userModel");
 const Stock = require("../models/stocksModel");
+const Transaction = require("../models/transactions");
 
 exports.purchaseStock = async (req, res) => {
     try {
@@ -35,6 +36,16 @@ exports.purchaseStock = async (req, res) => {
             await req.user.save();
             await purchase.save()
         }
+
+
+        const transactionLog = new Transaction({
+            userId: req.user._id,
+            transactionType: "BUY",
+            tickerBought: ticker,
+            shares: quantity,
+            investment: price
+        });
+        await transactionLog.save();
 
         await User.findByIdAndUpdate(user._id, {
             balance: Math.round((user.balance - totalPrice + Number.EPSILON) * 100) / 100
@@ -104,6 +115,14 @@ exports.sellStock = async (req, res) => {
         await User.findByIdAndUpdate(user._id, {
             balance: Math.round((user.balance + saleProfit + Number.EPSILON) * 100) / 100
         })
+
+        const transactionLog = new Transaction({
+            userId: req.user._id,
+            transactionType: "SELL",
+            tickerBought: ticker,
+            shares: quantity,
+            investment: price
+        });
 
         return res.status(200).json({
             status: 200,
