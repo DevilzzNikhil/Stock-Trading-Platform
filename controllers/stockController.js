@@ -36,3 +36,21 @@ exports.portfolioData = async(req,res) => {
     })
 
 }
+
+exports.leaderBoard = async(req,res) => {
+    let users = await User.find() ;
+    let list = [] ;
+    users.forEach(element => {
+        let userData = {
+            username: element.username ,
+            balance : element.balance ,
+        }
+        list.push(userData) ;
+    });
+
+    list.sort((a,b) => {
+        return  b.balance - a.balance
+    })
+    
+    res.status(200).json(list)
+}

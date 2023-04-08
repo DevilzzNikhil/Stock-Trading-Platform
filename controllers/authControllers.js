@@ -1,6 +1,8 @@
 const User = require("../models/userModel")
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
+const { OAuth2Client } = require('google-auth-library');
+const client = new OAuth2Client(process.env.CLIENT_ID)
 
 
 function PasswordValidator(password, res) {
@@ -9,51 +11,38 @@ function PasswordValidator(password, res) {
     }
 }
 
-function ErrorMessage(res, error) {
-    return res.status(error.status).json({ message: error.message });
-}
-
 exports.registerUser = async (req, res) => {
     try {
         const { username, email, password } = req.body;
         if (!username || !password || !email) {
             return res.status(200).json({
-                status: "Failed",
-                message: "Fill all the fields"
+                status: 400,
+                message: "Credential not provided"
             })
         }
-        if( PasswordValidator(password) )
-        {
-            return res.status(200).json({
-                status: "Failed",
-                message: "Password must be between 6-25 characters",
-            });
+        if (PasswordValidator(password)) {
+            return res.status(200).json({ status: 400, message: "Password must be between 6-25 characters" });
         }
 
-        let existingUser = await User.findOne({email}) 
-        if(existingUser)
-        {
-            return res.status(200).json({
-                status: "Failed",
-                message: "Account Already Exist with this Email",
-            });
+        let existingUser = await User.findOne({ email })
+        if (existingUser) {
+            return res.status(200).json({ status: 400, message: "Account Already with this email" });
         }
 
-        existingUser = await User.findOne({username}) 
-        if(existingUser)
-        {
+        existingUser = await User.findOne({ username })
+        if (existingUser) {
             return res.status(200).json({
-                status: "Failed",
-                message: "Account Already Exist with this Username",
-            });
+                status: 400,
+                message: "Username already exists"
+            })
         }
 
         const user = await User.create({ email, username, password });
-        const token = await user.generateAuthToken() ;
-        return res.status(201).json({ message:"Registered Successfully Successfully", user, token});
+        const token = await user.generateAuthToken();
+        res.status(200).json({ status: 200, message: "Registered Successfully", user, token });
 
     } catch (error) {
-        return res.status(400).json(error.message)
+        res.status(200).json({ status: 400, message: error.message })
     }
 }
 
@@ -63,26 +52,47 @@ exports.loginUser = async (req, res) => {
         console.log(req.body)
         if (!password || !email) {
             return res.status(200).json({
-                status: "Failed",
+                status: 400,
                 message: "Credential not provided"
             })
         }
         const user = await User.findByCredentials(email, password);
+        if (!user) {
+            res.status(200).json({
+                status: 400,
+                message: "Incorrect Email or Password"
+            })
+        }
+
         const token = await user.generateAuthToken();
-        res.json({ message:"Logged In Successfully", user, token });
+        res.status(200).json({ status: 200, message: "Logged In Successfully", user, token });
 
     } catch (error) {
-        res.status(400).json(error.message)
+        res.status(200).json({ status: 400, message: "Some Error Occured" })
     }
 }
 
-exports.deleteUser = async (req, res) => {
+exports.googleLogin = async (req, res) => {
     try {
-        req.user.tokens = req.user.tokens.filter((tokenObj) => {
-            return tokenObj.token !== req.token;
-        })
+        const { token } = req.body;
+        const ticket = await client.verifyIdToken({
+            idToken: token,
+            audience: process.env.CLIENT_ID
+        });
+        const { email } = ticket.getPayload();
+        const user = await User.findOne({ email: email });
+        if (!user) {
+            res.status(200).json({
+                status: 400,
+                message: "No user found with this email"
+            })
+        }
+        const token_1 = await user.generateAuthToken();
+        res.status(200).json({ status: 200, message: "Logged In Successfully", user, token_1 });
+
+
     } catch (error) {
-        res.status(400).json(error.message)
+        res.status(200).json({ status: 400, message: error.message })
     }
 }
 

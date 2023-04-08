@@ -29,7 +29,7 @@ app.use('/trade', tradeRouter) ;
 
 
 
-const PORT = process.env.PORT || 6000
+const PORT = process.env.PORT || 5000
 
 mongoose
     .connect(DB, { useNewUrlParser: true, useUnifiedTopology: true })

@@ -7,15 +7,15 @@ exports.purchaseStock = async (req, res) => {
         const { ticker, quantity, price } = req.body;
         if (!ticker || !quantity || !price) {
             return res.status(200).json({
-                status: "Failed",
-                message: "Fill all the fields"
+                status: 400,
+                message: "Credential not provided"
             })
         }
         const totalPrice = quantity * price;
         if (user.balance - totalPrice < 0) {
             return res.status(200).json({
-                status: "Transaction Failed",
-                message: "You don't have enough balance to purchase this stock.",
+                status: 400,
+                message: "You don't have enough balance to purchase this stock."
             })
         }
 
@@ -31,8 +31,8 @@ exports.purchaseStock = async (req, res) => {
         }
         else {
             const purchase = new Stock({ ticker: ticker, quantity: quantity, price: price * quantity, user: user._id })
-            req.user.stocks.push(purchase._id) ;
-            await req.user.save() ;
+            req.user.stocks.push(purchase._id);
+            await req.user.save();
             await purchase.save()
         }
 
@@ -40,16 +40,18 @@ exports.purchaseStock = async (req, res) => {
             balance: Math.round((user.balance - totalPrice + Number.EPSILON) * 100) / 100
         })
 
+
+
         return res.status(200).json({
-            status: "Transaction made successfully",
+            status: 200,
+            message: "Transaction made successfully",
             balance: Math.round((user.balance - totalPrice + Number.EPSILON) * 100) / 100,
         })
 
     } catch (error) {
         return res.status(200).json({
-            status: "fail",
+            status: 400,
             message: "Something unexpected happened.",
-            error: error.message
         });
     }
 }
@@ -61,7 +63,7 @@ exports.sellStock = async (req, res) => {
         const { ticker, quantity, price } = req.body;
         if (!ticker || !quantity || !price) {
             return res.status(200).json({
-                status: "Failed",
+                status: 400,
                 message: "Fill all the fields"
             })
         }
@@ -70,8 +72,8 @@ exports.sellStock = async (req, res) => {
 
         if (purchased_stock.length == 0) {
             return res.status(200).json({
-                status: "Transaction Failed",
-                message: "You does'not have enough quantity to sell the stock.",
+                status: 400,
+                message: "You do not have enough quantity to sell the stock.",
             })
         }
 
@@ -82,7 +84,7 @@ exports.sellStock = async (req, res) => {
 
         if (quantity > present_quantity) {
             return res.status(200).json({
-                status: "fail",
+                status: 400,
                 message: "Invalid quantity.",
             });
         }
@@ -104,14 +106,14 @@ exports.sellStock = async (req, res) => {
         })
 
         return res.status(200).json({
-            status: "Transaction made successfully",
+            status: 200,
+            message: "Transaction made successfully",
             balance: Math.round((user.balance + saleProfit + Number.EPSILON) * 100) / 100,
         })
     } catch (error) {
         return res.status(200).json({
-            status: "fail",
+            status: 400,
             message: "Something unexpected happened.",
-            error: error.message
         });
     }
 }
