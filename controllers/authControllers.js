@@ -11,6 +11,18 @@ function PasswordValidator(password, res) {
     }
 }
 
+
+exports.infoUser = async( req, res) => {
+    try {
+        return res.status(200).json({
+            status: 200,
+            user: req.user,
+        })
+    } catch (error) {
+        res.status(200).json({ status: 400, message: error.message })
+    }
+}
+
 exports.registerUser = async (req, res) => {
     try {
         const { username, email, password } = req.body;
