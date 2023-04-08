@@ -1,6 +1,4 @@
 const User = require("../models/userModel")
-const stockNames = require("../Sheet1.json")
-const Stock = require("../models/stocksModel")
 
 const {getStockInformation, getTimedVariedData, getInfoOfOneStock } = require("../utility/stocksInfo")
 const ObjectId = require("mongoose").Types.ObjectId ;
@@ -25,8 +23,6 @@ exports.stockTimedData = async(req,res) => {
     if( req.query.timeDuration) timeDuration = req.query.timeDuration
     if( req.query.interval) interval = req.query.interval
 
-    console.log(symbol, timeDuration)
-
     data = await getTimedVariedData(timeDuration, symbol, interval) ;
     
     return res.status(200).json({message : "success", data : data})
@@ -35,7 +31,6 @@ exports.stockTimedData = async(req,res) => {
 exports.portfolioData = async(req,res) => {
     const user = req.user  ; 
     const id = user._id ;
-    console.log(user) ;
     User.findById(user._id).populate('stocks').then(({ stocks }) => {
         res.status(200).json(stocks)
     })
