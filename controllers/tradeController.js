@@ -123,7 +123,7 @@ exports.sellStock = async (req, res) => {
             shares: quantity,
             investment: price
         });
-        await transactionLog.save();
+        await transactionLog.save() ;
 
         return res.status(200).json({
             status: 200,
